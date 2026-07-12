@@ -1,0 +1,84 @@
+[
+  {
+    "name": "get_request_echo",
+    "method": "GET",
+    "path": "/get",
+    "data": { "page": "1", "size": "20" },
+    "auth": false
+  },
+  {
+    "name": "post_form_submit",
+    "method": "POST",
+    "path": "/post",
+    "data": { "name": "demo", "action": "submit" },
+    "auth": false
+  },
+  {
+    "name": "get_status_ok",
+    "method": "GET",
+    "path": "/status/200",
+    "auth": false
+  },
+  {
+    "name": "get_response_headers",
+    "method": "GET",
+    "path": "/response-headers",
+    "data": { "Content-Type": "application/json" },
+    "auth": false
+  },
+  {
+    "name": "get_user_agent",
+    "method": "GET",
+    "path": "/user-agent",
+    "auth": false
+  },
+  {
+    "name": "get_json_payload",
+    "method": "GET",
+    "path": "/json",
+    "auth": false
+  },
+  {
+    "name": "get_encoding_utf8",
+    "method": "GET",
+    "path": "/encoding/utf8",
+    "auth": false
+  },
+  {
+    "name": "get_bearer_protected",
+    "method": "GET",
+    "path": "/headers",
+    "auth": true
+  },
+  {
+    "name": "get_hidden_basic_auth",
+    "method": "GET",
+    "path": "/cookies",
+    "auth": true
+  },
+  {
+    "name": "get_authenticated_ip",
+    "method": "GET",
+    "path": "/ip",
+    "auth": true
+  },
+  {
+    "name": "post_authenticated_action",
+    "method": "POST",
+    "path": "/anything",
+    "data": { "op": "update", "id": "42" },
+    "auth": true
+  },
+  {
+    "name": "static_asset_should_be_filtered",
+    "method": "GET",
+    "path": "/static/logo.png",
+    "auth": false
+  },
+  {
+    "name": "logout_should_be_filtered",
+    "method": "POST",
+    "path": "/logout",
+    "auth": true
+  }
+]

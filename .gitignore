@@ -1,0 +1,21 @@
+# 環境與憑證 —— 絕不進 git
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# 產生器的輸出（交接產物，不進版控）
+output/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# 測試報告
+reports/
+*.html
