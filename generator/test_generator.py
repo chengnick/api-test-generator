@@ -261,6 +261,10 @@ class TestPreLoginAPIs:
         assert_api_ok(resp, api["name"])
 
 
+@pytest.mark.skipif(
+    not POST_LOGIN_APIS,
+    reason="此目標沒有登入後 API，認證流程無需驗證",
+)
 class TestAuth:
     """認證流程本身。放在 post-login 測試之前，讓失敗原因一目了然。"""
 
@@ -269,6 +273,10 @@ class TestAuth:
         print("\\n  ✅ 認證流程驗證通過")
 
 
+@pytest.mark.skipif(
+    not POST_LOGIN_APIS,
+    reason="此目標沒有登入後 API",
+)
 class TestPostLoginAPIs:
     """需認證才能存取的 API"""
 
